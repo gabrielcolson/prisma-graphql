@@ -1,4 +1,5 @@
 import { Post } from '@prisma/client';
+import slugify from 'slugify';
 
 import { ForbiddenError } from '../utils/errors';
 import { Service } from '../utils/Service';
@@ -14,7 +15,7 @@ export class PostService extends Service {
       data: {
         title,
         content,
-        slug: encodeURIComponent(title),
+        slug: slugify(title.toLowerCase()),
         author: { connect: { id: user.id } },
       },
     });

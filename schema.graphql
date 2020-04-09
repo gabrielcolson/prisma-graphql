@@ -30,6 +30,7 @@ type Post {
   content: String!
   createdAt: DateTime!
   id: String!
+  slug: String!
   title: String!
   updatedAt: DateTime!
 }
@@ -45,6 +46,7 @@ input PostOrderByInput {
   content: OrderByArg
   createdAt: OrderByArg
   id: OrderByArg
+  slug: OrderByArg
   title: OrderByArg
   updatedAt: OrderByArg
   userId: OrderByArg
@@ -58,6 +60,7 @@ input PostWhereInput {
   id: UUIDFilter
   NOT: [PostWhereInput!]
   OR: [PostWhereInput!]
+  slug: StringFilter
   title: StringFilter
   updatedAt: DateTimeFilter
   userId: StringFilter
@@ -65,7 +68,7 @@ input PostWhereInput {
 
 input PostWhereUniqueInput {
   id: String
-  userId: String
+  slug: String
 }
 
 type Query {
@@ -119,7 +122,9 @@ input UserWhereInput {
 }
 
 input UserWhereUniqueInput {
+  email: String
   id: String
+  username: String
 }
 
 scalar UUID

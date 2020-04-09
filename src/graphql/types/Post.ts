@@ -5,6 +5,7 @@ export const Post = objectType({
   definition(t): void {
     t.model.id();
     t.model.title();
+    t.model.slug();
     t.model.content();
     t.model.author();
     t.model.createdAt();
