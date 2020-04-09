@@ -14,6 +14,7 @@ export class PostService extends Service {
       data: {
         title,
         content,
+        slug: encodeURIComponent(title),
         author: { connect: { id: user.id } },
       },
     });
