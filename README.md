@@ -1,5 +1,5 @@
 # Prisma-GraphQL
-Boilerplate for GraphQL API with made for the
+Boilerplate for GraphQL API made for the
 [utopia boilerplate generator](https://github.com/gabrielcolson/utopia)
 
 
