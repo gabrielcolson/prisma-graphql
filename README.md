@@ -11,7 +11,7 @@ utopia mySuperNewProject https://github.com/gabrielcolson/prisma-graphql.git
 ```
 
 
-## Getting started
+## Quick start
 First, you will need to setup your environment. You can use
 [direnv](https://direnv.net/):
 ```bash
@@ -47,7 +47,7 @@ Save and apply the migration to your database:
 ```bash
 npm install
 npm run db:migrate:save
-npm run db:migratet:up
+npm run db:migrate:up
 ```
 
 Run the development server:
