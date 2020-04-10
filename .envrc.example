@@ -1,0 +1,4 @@
+export NODE_ENV=development
+export DATABASE_URL=postgresql://postgres:postgres@localhost:5432/postgres?schema=public
+export PORT=4000
+export ALLOWED_ORIGIN=http://localhost:3000
