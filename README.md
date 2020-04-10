@@ -7,7 +7,7 @@ Boilerplate for GraphQL API made for the
 This boilerplate is meant to be used with [utopia](https://github.com/gabrielcolson/utopia):
 ```bash
 go get -u github.com/gabrielcolson/utopia
-utopia mySuperNewProject https://github.com/gabrielcolson/prisma-graphql.git
+utopia prisma-graphql https://github.com/gabrielcolson/prisma-graphql.git
 ```
 
 
