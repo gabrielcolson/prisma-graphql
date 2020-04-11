@@ -1,4 +1,3 @@
 features:
-  - name: test
-    description: testing boilerplate and utils
+  test:
     branch: utopia/test
