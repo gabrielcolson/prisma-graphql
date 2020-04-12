@@ -6,8 +6,8 @@ Boilerplate for GraphQL API made for the
 ## Usage
 This boilerplate is meant to be used with [utopia](https://github.com/gabrielcolson/utopia):
 ```bash
-go get -u github.com/gabrielcolson/utopia
-utopia prisma-graphql https://github.com/gabrielcolson/prisma-graphql.git
+go get github.com/gabrielcolson/utopia
+utopia https://github.com/gabrielcolson/prisma-graphql.git
 ```
 
 
@@ -48,6 +48,11 @@ Save and apply the migration to your database:
 npm install
 npm run db:migrate:save
 npm run db:migrate:up
+```
+
+Launch the tests:
+```bash
+npm test
 ```
 
 Run the development server:
