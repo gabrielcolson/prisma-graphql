@@ -13,7 +13,8 @@
     "generate": "npm run -s generate:db && npm run -s generate:gql",
     "dev": "concurrently --kill-others \"ts-node-dev --no-notify ./src\" \"prisma2 generate --watch\"",
     "lint": "eslint . --ext ts --ignore-path .gitignore",
-    "build": "npm run -s generate && tsc --project tsconfig.json"
+    "build": "npm run -s generate && tsc --project tsconfig.json",
+    "start": "node dist"
   },
   "keywords": [],
   "author": "",
