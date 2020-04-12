@@ -10,5 +10,11 @@ export const Query = queryType({
         return okService.ok();
       },
     });
+
+    t.crud.user();
+    t.crud.users({ filtering: true, ordering: true });
+
+    t.crud.post();
+    t.crud.posts({ filtering: true, ordering: true });
   },
 });
