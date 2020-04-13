@@ -6,6 +6,7 @@ import env from 'env-var';
 import cors from 'cors';
 
 import { getGraphqlMiddleware } from './graphql';
+import session from './utils/session';
 
 export interface ServerConfig {
   db?: PrismaClient;
@@ -25,6 +26,8 @@ class Server {
       credentials: true,
       origin: ALLOWED_ORIGIN,
     }));
+
+    app.use(session);
 
     const graphqlMiddleware = getGraphqlMiddleware(this.db);
     app.use(graphqlMiddleware);

@@ -2,6 +2,24 @@
 ### Do not make changes to this file directly
 
 
+scalar DateTime
+
+type Mutation {
+  login(email: String!, password: String!): User!
+  logout: User!
+  register(email: String!, password: String!, username: String!): User!
+}
+
 type Query {
+  me: User!
   ok: Boolean!
+}
+
+type User {
+  createdAt: DateTime!
+  email: String!
+  id: String!
+  password: String!
+  updatedAt: DateTime!
+  username: String!
 }
