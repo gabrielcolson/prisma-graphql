@@ -3,6 +3,7 @@ import { ApolloServer, AuthenticationError, ForbiddenError } from 'apollo-server
 import { GraphQLError } from 'graphql';
 import { Router } from 'express';
 
+import { SessionManager } from '../SessionManager';
 import * as errors from '../utils/errors';
 
 import { Context } from './context';
@@ -30,9 +31,13 @@ function formatError(err: GraphQLError): Error {
 export function getGraphqlMiddleware(db: PrismaClient): Router {
   const apolloServer = new ApolloServer({
     schema,
-    context: (): Context => ({
-      db,
-    }),
+    context: ({ req }): Context => {
+      const session = new SessionManager(db, req);
+      return ({
+        db,
+        session,
+      });
+    },
     formatError,
   });
 
