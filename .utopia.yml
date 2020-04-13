@@ -1,3 +1,5 @@
 features:
   blog:
     branch: utopia/blog
+  auth:
+    branch: utopia/auth
